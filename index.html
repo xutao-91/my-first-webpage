@@ -3,10 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一个网页</title>
+    <title>我的复杂网页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .intro {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .intro img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .intro-text h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .intro-text p {
+            margin: 10px 0 0;
+            color: #555;
+        }
+        form {
+            margin-top: 20px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>你好，世界！</h1>
-    <p>这是我的第一个网页。</p>
+    <header>
+        <h1>欢迎来到我的网页</h1>
+    </header>
+    <nav>
+        <a href="#about">关于我</a>
+        <a href="#contact">联系我</a>
+    </nav>
+    <div class="container">
+        <section id="about" class="intro">
+            <img src="https://via.placeholder.com/150" alt="我的头像">
+            <div class="intro-text">
+                <h2>关于我</h2>
+                <p>你好！我是一名网页开发者，热爱编程和设计。这个网页是我用 HTML 和 CSS 创建的。</p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>联系我</h2>
+            <form>
+                <label for="name">姓名:</label>
+                <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
+                <label for="email">邮箱:</label>
+                <input type="email" id="email" name="email" placeholder="请输入您的邮箱" required>
+                <label for="message">留言:</label>
+                <textarea id="message" name="message" rows="5" placeholder="请输入您的留言" required></textarea>
+                <button type="submit">提交</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 我的网页. 保留所有权利。</p>
+    </footer>
 </body>
 </html>
